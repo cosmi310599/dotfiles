@@ -5,6 +5,23 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# The following lines were added by compinstall
+#
+#zstyle ':completion:*' completer _complete _ignored
+zstyle ':completion:*' menu select
+zstyle ':completion:*:default' list-colors \
+  "di=1;36" "ln=35" "so=32" "pi=33" "ex=31" "bd=34;46" "cd=34;43" \
+  "su=30;41" "sg=30;46" "tw=30;42" "ow=30;43"
+
+# Small letters will match small and capital letters. (i.e. capital letters match only capital letters.)
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+zstyle :compinstall filename "$HOME/.zshrc"
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
 # Set up the prompt
 
 autoload -Uz promptinit
@@ -21,27 +38,10 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
-# Use modern completion system
-autoload -Uz compinit
-compinit
+alias ls="colorls"
+alias bat="batcat"
+alias vim="nvim"
 
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -49,8 +49,3 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-alias ls="colorls"
-alias bat="batcat"
-alias vim="nvim"
