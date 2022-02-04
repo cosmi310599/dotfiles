@@ -39,7 +39,7 @@ SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
 alias ls="lsd"
-alias bat="batcat"
+alias cat="bat"
 alias vim="nvim"
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
