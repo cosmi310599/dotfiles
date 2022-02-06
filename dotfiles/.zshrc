@@ -41,6 +41,8 @@ HISTFILE=~/.zsh_history
 alias ls="lsd"
 alias cat="bat"
 alias vim="nvim"
+alias 'ls -la'="ls -latr"
+
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
