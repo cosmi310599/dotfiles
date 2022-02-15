@@ -54,3 +54,4 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+export PATH="$PATH:$HOME/.spicetify"
