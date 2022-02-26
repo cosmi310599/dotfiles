@@ -26,6 +26,8 @@ Plug 'https://github.com/nvim-telescope/telescope.nvim'
 Plug 'https://github.com/nvim-lua/plenary.nvim'
 Plug 'https://github.com/ray-x/lsp_signature.nvim.git'
 Plug 'https://github.com/vifm/vifm.vim.git'
+Plug 'https://github.com/ptzz/lf.vim.git'
+Plug 'https://github.com/voldikss/vim-floaterm.git'
 
 call plug#end()
 
@@ -38,7 +40,7 @@ nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
-":colorscheme abstract
-:colorscheme afterglow
+:colorscheme abstract
+":colorscheme afterglow
 
 let NERDTreeShowHidden=1
