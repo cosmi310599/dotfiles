@@ -14,35 +14,36 @@ zstyle ':completion:*:default' list-colors \
   "su=30;41" "sg=30;46" "tw=30;42" "ow=30;43"
 
 # Small letters will match small and capital letters. (i.e. capital letters match only capital letters.)
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+	zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-zstyle :compinstall filename "$HOME/.zshrc"
+	zstyle :compinstall filename "$HOME/.zshrc"
 
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
+	autoload -Uz compinit
+	compinit
+	# End of lines added by compinstall
 
-# Set up the prompt
+	# Set up the prompt
 
-autoload -Uz promptinit
-promptinit
-prompt adam1
+	autoload -Uz promptinit
+	promptinit
+	prompt adam1
 
-setopt histignorealldups sharehistory
+	setopt histignorealldups sharehistory
 
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
+	# Use emacs keybindings even if our EDITOR is set to vi
+	bindkey -e
 
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
+	# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+	HISTSIZE=1000
+	SAVEHIST=1000
+	HISTFILE=~/.zsh_history
 
 alias ls="lsd"
 alias cat="bat"
 alias vim="nvim"
 alias "ls -la"="ls -latr"
 alias "git log"="git log --all --oneline --graph"
+alias lf="lfrun"
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
