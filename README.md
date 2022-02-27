@@ -50,6 +50,5 @@ It is in process of building and continous improvement, hope u rlly enjoy :blush
     * > Shows the amount of opened workspaces and highlights the current one using unicode characters.
 
 
-#(Añadir GRUB THEME)
 
 
