@@ -2,9 +2,10 @@
 Hi! :wave:, this dotfiles contains my custom desktop enviorment configurations, wallpapers and scripts. :woman_technologist:
 
 It is in process of building and continous improvement, hope u rlly enjoy :blush:
-# Screenshots :camera_flash:
+<!-- # Screenshots :camera_flash:
+[TEST IMAGE IS NOT THE FINAL]
+![](Pictures/DESKTOP.png)-->
 
-![](Pictures/DESKTOP.png)
 # Setup :gear:
 * **Terminal:** [Terminator](https://terminator-gtk3.readthedocs.io/en/latest/#)
 * **Spotify theme:** [Spicetify](https://github.com/khanhas/spicetify-cli)
@@ -17,9 +18,10 @@ It is in process of building and continous improvement, hope u rlly enjoy :blush
 * **File manager:** Files
 * **Text Editor:** [Neovim](https://github.com/rockerBOO/awesome-neovim) 
 * **Icon themes:** adwaita dark 
-* **Shell:** Zsh
-* **Fonts:**
-* **Gnome tools:** Tweak
+* **Shell:** Zsh (& p10k)
+* **Fonts:** Nerd font 
+* **Gnome tools:** Tweaks
+* **GRUB Theme:** Grub-theme-vimix
 
 # Extensions 
 * **[Blus my Shell](https://extensions.gnome.org/extension/3193/blur-my-shell/)** 
@@ -48,7 +50,3 @@ It is in process of building and continous improvement, hope u rlly enjoy :blush
 * **[Workspace Indicator](https://extensions.gnome.org/extension/3952/workspace-indicator/)**
 
     * > Shows the amount of opened workspaces and highlights the current one using unicode characters.
-
-
-
-
