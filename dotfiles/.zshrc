@@ -39,11 +39,14 @@ zstyle ':completion:*:default' list-colors \
 	HISTFILE=~/.zsh_history
 
 alias ls="lsd"
-alias cat="bat"
+#alias cat="bat"
 alias vim="nvim"
 alias "ls -la"="ls -latr"
 alias "git log"="git log --all --oneline --graph"
 alias lf="lfrun"
+alias bpy="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=python'"
+alias bpsh="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=bash'"
+alias bp="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=text'"
 
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
@@ -58,3 +61,5 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 export PATH="$PATH:$HOME/.spicetify"
 
 [ -f "/home/cosmi/.config/lf/lficons" ] && source "/home/cosmi/.config/lf/lficons"
+
+source ~/zsh-wakatime/zsh-wakatime.plugin.zsh

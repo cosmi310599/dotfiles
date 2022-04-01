@@ -21,3 +21,4 @@ set cursorcolumn
 
 
 
+Plugin 'wakatime/vim-wakatime'
