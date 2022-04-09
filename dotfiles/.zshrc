@@ -38,9 +38,17 @@ zstyle ':completion:*:default' list-colors \
 	SAVEHIST=1000
 	HISTFILE=~/.zsh_history
 
+
+export PATH="$PATH:$HOME/.spicetify"
+export EDITOR='/usr/bin/nvim'
+export SUDO_EDITOR=${EDITOR}
+export VISUAL=${EDITOR}
+
+
+alias sudo='sudo ' #This is needed to be able to use aliases with sudo
 alias ls="lsd"
 #alias cat="bat"
-alias vim="nvim"
+alias vim='nvim'
 alias "ls -la"="ls -latr"
 alias "git log"="git log --all --oneline --graph"
 alias lf="lfrun"
@@ -58,7 +66,6 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
 #source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-export PATH="$PATH:$HOME/.spicetify"
 
 [ -f "/home/cosmi/.config/lf/lficons" ] && source "/home/cosmi/.config/lf/lficons"
 
