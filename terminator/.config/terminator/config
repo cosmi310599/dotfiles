@@ -1,6 +1,6 @@
 [global_config]
   tab_position = hidden
-  title_transmit_bg_color = "#000000"
+  title_transmit_bg_color = "#3d3846"
   inactive_color_offset = 0.7048192771084337
   suppress_multiple_term_dialog = True
 [keybindings]

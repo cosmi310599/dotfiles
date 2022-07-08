@@ -11,7 +11,8 @@ call plug#begin('~/.vim/vim-plug')
 Plug 'http://github.com/tpope/vim-surround' " Surrounding ysw)
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
-Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+" Plug 'https://github.com/vim-airline/vim-airline' " Status bar
+Plug 'https://github.com/itchyny/lightline.vim' 
 Plug 'https://github.com/lifepillar/pgsql.vim' " PSQL Pluging needs :SQLSetType pgsql.vim
 Plug 'https://github.com/ap/vim-css-color' " CSS Color Preview
 Plug 'https://github.com/rafi/awesome-vim-colorschemes' " Retro Scheme
@@ -43,3 +44,9 @@ let g:NERDTreeDirArrowCollapsible="~"
 
 let NERDTreeShowHidden=1
 let g:airline_theme='afterglow'
+
+
+let g:lightline = {
+      \ 'colorscheme': 'one',
+      \ 'background': 'dark',
+      \ }

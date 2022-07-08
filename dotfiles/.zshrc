@@ -39,7 +39,11 @@ zstyle ':completion:*:default' list-colors \
 	HISTFILE=~/.zsh_history
 
 
-export PATH="$PATH:$HOME/.spicetify"
+path+=(
+		$HOME/.local/bin
+		$HOME/.spicetify
+)
+
 export EDITOR='/usr/bin/nvim'
 export SUDO_EDITOR=${EDITOR}
 export VISUAL=${EDITOR}
@@ -55,7 +59,14 @@ alias lf="lfrun"
 alias bpy="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=python'"
 alias bpsh="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=bash'"
 alias bp="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=text'"
+alias activate='. venv/bin/activate' 
+alias build='python3 setup.py bdist_wheel'
 
+alias start_forti='systemctl start openfortivpn@config.service'
+alias stop_forti='systemctl stop openfortivpn@config.service'
+
+now=$(date +"%m_%d_%Y")
+alias dump_error_logs="journalctl -b-1 -k --no-pager > error_${now}.log"
 #source ~/powerlevel10k/powerlevel10k.zsh-theme
 source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
 
@@ -70,3 +81,4 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [ -f "/home/cosmi/.config/lf/lficons" ] && source "/home/cosmi/.config/lf/lficons"
 
 source ~/zsh-wakatime/zsh-wakatime.plugin.zsh
+
