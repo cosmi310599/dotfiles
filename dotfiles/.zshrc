@@ -51,17 +51,22 @@ export VISUAL=${EDITOR}
 
 alias sudo='sudo ' #This is needed to be able to use aliases with sudo
 alias ls="lsd"
-#alias cat="bat"
+alias la='ls -a'
+alias lla='ls -la'
+alias lt='ñs --tree'
+alias 'ls -la'='ls -latr'
 alias vim='nvim'
-alias "ls -la"="ls -latr"
 alias "git log"="git log --all --oneline --graph"
-alias lf="lfrun"
+
 alias bpy="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=python'"
 alias bpsh="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=bash'"
 alias bp="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=text'"
+
+alias create_venv='python3 -m venv venv'
 alias activate='. venv/bin/activate' 
 alias build='python3 setup.py bdist_wheel'
 
+alias "df -h"="duf"
 alias start_forti='systemctl start openfortivpn@config.service'
 alias stop_forti='systemctl stop openfortivpn@config.service'
 
@@ -73,10 +78,8 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-#source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f "/home/cosmi/.config/lf/lficons" ] && source "/home/cosmi/.config/lf/lficons"
 

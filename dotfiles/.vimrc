@@ -28,6 +28,9 @@ Plug 'https://github.com/ray-x/lsp_signature.nvim.git'
 Plug 'wakatime/vim-wakatime'
 Plug 'https://github.com/vifm/vifm.vim.git'
 Plug 'https://github.com/athul/waka-readme'
+Plug 'tpope/vim-dispatch'
+Plug 'habamax/vim-asciidoctor'
+
 call plug#end()
 
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -40,7 +43,9 @@ let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
 
 ":colorscheme abstract
-:colorscheme afterglow
+colorscheme afterglow
+
+autocmd VimEnter * NERDTree
 
 let NERDTreeShowHidden=1
 let g:airline_theme='afterglow'
@@ -50,3 +55,11 @@ let g:lightline = {
       \ 'colorscheme': 'one',
       \ 'background': 'dark',
       \ }
+
+""""""""""""""""""""""""""""""""""""""""""
+" Auto build on save for Asciidoctor files
+" It is using `vim-dispatch` (:compiler)
+""""""""""""""""""""""""""""""""""""""""""
+#augroup ON_ASCIIDOCTOR_SAVE | au!
+#   au BufWritePost *.adoc :compiler asciidoctor2html | Make!
+#augroup end
