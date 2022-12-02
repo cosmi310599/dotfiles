@@ -45,7 +45,7 @@ let g:NERDTreeDirArrowCollapsible="~"
 ":colorscheme abstract
 colorscheme afterglow
 
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 
 let NERDTreeShowHidden=1
 let g:airline_theme='afterglow'
@@ -60,6 +60,6 @@ let g:lightline = {
 " Auto build on save for Asciidoctor files
 " It is using `vim-dispatch` (:compiler)
 """"""""""""""""""""""""""""""""""""""""""
-#augroup ON_ASCIIDOCTOR_SAVE | au!
-#   au BufWritePost *.adoc :compiler asciidoctor2html | Make!
-#augroup end
+"augroup ON_ASCIIDOCTOR_SAVE | au!
+"   au BufWritePost *.adoc :compiler asciidoctor2html | Make!
+"augroup end
