@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -53,10 +55,11 @@ alias sudo='sudo ' #This is needed to be able to use aliases with sudo
 alias ls="lsd"
 alias la='ls -a'
 alias lla='ls -la'
-alias lt='ñs --tree'
+alias lt='ls --tree'
 alias 'ls -la'='ls -latr'
 alias vim='nvim'
 alias "git log"="git log --all --oneline --graph"
+alias search="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 
 alias bpy="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=python'"
 alias bpsh="curl -X POST https://bpa.st/curl -F 'raw=<-' -F 'lexer=bash'"
@@ -67,8 +70,8 @@ alias activate='. venv/bin/activate'
 alias build='python3 setup.py bdist_wheel'
 
 alias "df -h"="duf"
-alias start_forti='systemctl start openfortivpn@config.service'
-alias stop_forti='systemctl stop openfortivpn@config.service'
+#alias start_forti='systemctl start openfortivpn@config.service'
+#alias stop_forti='systemctl stop openfortivpn@config.service'
 
 now=$(date +"%m_%d_%Y")
 alias dump_error_logs="journalctl -b-1 -k --no-pager > error_${now}.log"
@@ -83,5 +86,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 [ -f "/home/cosmi/.config/lf/lficons" ] && source "/home/cosmi/.config/lf/lficons"
 
-source ~/zsh-wakatime/zsh-wakatime.plugin.zsh
+#source ~/zsh-wakatime/zsh-wakatime.plugin.zsh
 
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
