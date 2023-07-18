@@ -69,6 +69,8 @@ alias create_venv='python3 -m venv venv'
 alias activate='. venv/bin/activate' 
 alias build='python3 setup.py bdist_wheel'
 
+alias update='yay -Syu --noconfirm'
+
 alias "df -h"="duf"
 #alias start_forti='systemctl start openfortivpn@config.service'
 #alias stop_forti='systemctl stop openfortivpn@config.service'
